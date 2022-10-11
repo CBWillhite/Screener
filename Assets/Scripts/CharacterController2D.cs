@@ -35,6 +35,35 @@ public class CharacterController2D : MonoBehaviour
         Gizmos.DrawRay(ray);
     }
 
+    public bool TestMove(Vector2 direction, float offset)
+    {
+        return TestMove(direction, offset, jumpableTags);
+    }
+
+    public bool TestMove(Vector2 direction, float offset, List<string> tags)
+    {
+        List<RaycastHit2D> results = new List<RaycastHit2D>();
+
+        return TestMove(direction, offset, tags, results);
+    }
+
+    public bool TestMove(Vector2 direction, float offset, List<string> tags, List<RaycastHit2D> results)
+    {
+        Vector2 origin = ((Vector2)transform.position)+capsuleCollider2D.offset+(direction*offset);
+
+        Physics2D.BoxCast(origin, capsuleCollider2D.size*0.6f, 0.0f, Vector2.right, contactFilter2D, results, 0.1f); //new Vector2(capsuleCollider2D.size.x*0.9f, capsuleCollider2D.y*0.9f)
+
+        foreach(RaycastHit2D hit in results)
+        {
+            if (tags.Contains(hit.collider.gameObject.tag))
+            {
+                return false;
+            }
+        }
+
+        return true; //Nothing was hit.
+    }
+
     public bool IsTouchingGround()
     {
         List<RaycastHit2D> results = new List<RaycastHit2D>();

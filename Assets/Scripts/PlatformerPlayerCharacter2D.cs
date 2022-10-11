@@ -26,7 +26,29 @@ public class PlatformerPlayerCharacter2D : CharacterController2D
         // Test before moving
         if (xInput != 0.0f)
         {
-            motion.x=xInput*speed;
+
+            if((!TestMove(Vector2.right, collisionTestOffset) && xInput > 0.0f)&&!isTouchingGround) 
+            {
+                motion.x = -xInput * (speed * 0.01f);
+                if ((Input.GetAxis("Jump") > 0.0f)){
+                    motion.y = speed+2.5f;
+                    motion.x = -speed+2.5f;
+                    isTouchingGround = false;
+                }
+                
+            } else if((!TestMove(Vector2.left, collisionTestOffset) && xInput < 0.0f)&&!isTouchingGround) 
+            {
+                motion.x = -xInput * (speed * 0.01f);
+                if ((Input.GetAxis("Jump") > 0.0f)){
+                    motion.y = speed+2.5f;
+                    motion.x = speed+2.5f;
+                    isTouchingGround = false;
+                }
+            } else 
+            {
+                motion.x=xInput*speed;
+            }
+            
         }
         if ((Input.GetAxis("Jump") > 0.0f) && isTouchingGround){
             motion.y = speed+2.5f;
