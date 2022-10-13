@@ -6,6 +6,7 @@ public class PlatformerPlayerCharacter2D : CharacterController2D
 {
     public float speed = 10.0f;
     public float collisionTestOffset;
+    public float jumpStrength = 5.0f;
     public SpriteRenderer spriteRenderer;
 
     private Rigidbody2D rigidbody2D;
@@ -31,7 +32,7 @@ public class PlatformerPlayerCharacter2D : CharacterController2D
             {
                 motion.x = -xInput * (speed * 0.01f);
                 if ((Input.GetAxis("Jump") > 0.0f)){
-                    motion.y = speed+2.5f;
+                    motion.y = jumpStrength;
                     motion.x = -speed+2.5f;
                     isTouchingGround = false;
                 }
@@ -40,7 +41,7 @@ public class PlatformerPlayerCharacter2D : CharacterController2D
             {
                 motion.x = -xInput * (speed * 0.01f);
                 if ((Input.GetAxis("Jump") > 0.0f)){
-                    motion.y = speed+2.5f;
+                    motion.y = jumpStrength;
                     motion.x = speed+2.5f;
                     isTouchingGround = false;
                 }
@@ -51,7 +52,7 @@ public class PlatformerPlayerCharacter2D : CharacterController2D
             
         }
         if ((Input.GetAxis("Jump") > 0.0f) && isTouchingGround){
-            motion.y = speed+2.5f;
+            motion.y = jumpStrength;
         }
 
         rigidbody2D.velocity = motion;
