@@ -71802,6 +71802,18 @@ PrefabInstance:
       propertyPath: aUIGroupObj
       value: 
       objectReference: {fileID: 1177431818}
+    - target: {fileID: 6163255934355960822, guid: 58f9c9472fdb6a6448bccb7b6623db65, type: 3}
+      propertyPath: byebye.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163255934355960822, guid: 58f9c9472fdb6a6448bccb7b6623db65, type: 3}
+      propertyPath: byebye.Array.data[0]
+      value: 
+      objectReference: {fileID: 1177431821}
+    - target: {fileID: 6163255934355960822, guid: 58f9c9472fdb6a6448bccb7b6623db65, type: 3}
+      propertyPath: byebye.Array.data[1]
+      value: 
+      objectReference: {fileID: 604565398}
     - target: {fileID: 6163255935572621863, guid: 58f9c9472fdb6a6448bccb7b6623db65, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -71855,6 +71867,11 @@ PrefabInstance:
 --- !u!1 &604565397 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6163255934355960712, guid: 58f9c9472fdb6a6448bccb7b6623db65, type: 3}
+  m_PrefabInstance: {fileID: 604565396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &604565398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6163255935572621880, guid: 58f9c9472fdb6a6448bccb7b6623db65, type: 3}
   m_PrefabInstance: {fileID: 604565396}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &631342200 stripped
@@ -72619,6 +72636,11 @@ GameObject:
 --- !u!225 &1177431820 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 8653933682087754637, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+  m_PrefabInstance: {fileID: 1177431816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1177431821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8653933682749014506, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
   m_PrefabInstance: {fileID: 1177431816}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1201998751

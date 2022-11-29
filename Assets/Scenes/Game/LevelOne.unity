@@ -1012,6 +1012,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8653933682087754639, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
   m_PrefabInstance: {fileID: 811095319}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &811095324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8653933682749014506, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+  m_PrefabInstance: {fileID: 811095319}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &851670420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32997,6 +33002,18 @@ PrefabInstance:
       propertyPath: aUIGroupObj
       value: 
       objectReference: {fileID: 811095322}
+    - target: {fileID: 6163255934355960822, guid: 58f9c9472fdb6a6448bccb7b6623db65, type: 3}
+      propertyPath: byebye.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6163255934355960822, guid: 58f9c9472fdb6a6448bccb7b6623db65, type: 3}
+      propertyPath: byebye.Array.data[0]
+      value: 
+      objectReference: {fileID: 811095324}
+    - target: {fileID: 6163255934355960822, guid: 58f9c9472fdb6a6448bccb7b6623db65, type: 3}
+      propertyPath: byebye.Array.data[1]
+      value: 
+      objectReference: {fileID: 1366270893}
     - target: {fileID: 6163255935572621863, guid: 58f9c9472fdb6a6448bccb7b6623db65, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -33055,6 +33072,11 @@ GameObject:
 --- !u!1 &1366270892 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6163255933681723173, guid: 58f9c9472fdb6a6448bccb7b6623db65, type: 3}
+  m_PrefabInstance: {fileID: 1366270890}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1366270893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6163255935572621880, guid: 58f9c9472fdb6a6448bccb7b6623db65, type: 3}
   m_PrefabInstance: {fileID: 1366270890}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1553211012

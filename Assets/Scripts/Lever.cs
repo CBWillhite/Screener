@@ -16,6 +16,7 @@ public class Lever : MonoBehaviour
     public string examined;
     public bool toggleUIFade = false;
     public GameObject obj;
+    public List<GameObject> byebye;
 
     [SerializeField] private CanvasGroup aUIGroup;
     [SerializeField] private CanvasGroup NextSceneFade;
@@ -99,6 +100,9 @@ public class Lever : MonoBehaviour
             case interaction.GAME:
                 Destroy(obj);
                 SceneManager.LoadScene(win);
+                foreach(GameObject bye in byebye){
+                    Destroy(bye);
+                }
                 break;
             default:
                 break;
