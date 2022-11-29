@@ -18,6 +18,9 @@ public class Lever : MonoBehaviour
     public GameObject obj;
 
     [SerializeField] private CanvasGroup aUIGroup;
+    [SerializeField] private CanvasGroup NextSceneFade;
+    [SerializeField] private GameObject aUIGroupObj;
+    [SerializeField] private GameObject NextSceneFadeObj;
 
     [SerializeField] private bool inFade = false;
     [SerializeField] private bool outFade = false;
@@ -75,18 +78,21 @@ public class Lever : MonoBehaviour
             case interaction.EXAMINE:
                 break;
             case interaction.LEVEL:
+                NextSceneFade.alpha=0;
+                aUIGroupObj.SetActive(false);
                 FadeIn();
                 while(inFade)
                 {
-                    if(aUIGroup.alpha<1)
+                    if(NextSceneFade.alpha<1)
                     {
-                        aUIGroup.alpha += (Time.deltaTime);
-                        if(aUIGroup.alpha>=1)
+                        NextSceneFade.alpha += (Time.deltaTime);
+                        if(NextSceneFade.alpha>=1)
                         {
                             inFade = false;
                         }
                     }
                 }
+                NextSceneFadeObj.SetActive(true);
                 locationReset();
                 SceneManager.LoadScene(level);
                 break;
