@@ -12,10 +12,50 @@ public class Lever : MonoBehaviour
     public List<GameObject> doors;
     public Text wins;
     public string win;
+    public string level;
     public string examined;
+    public bool toggleUIFade = false;
+    public GameObject obj;
+
+    [SerializeField] private CanvasGroup aUIGroup;
+
+    [SerializeField] private bool inFade = false;
+    [SerializeField] private bool outFade = false;
 
     private void Reset() {
         GetComponent<Collider2D>().isTrigger = true;
+    }
+
+    public void FadeIn()
+    {
+        inFade = true;
+    }
+
+    public void FadeOut()
+    {
+        outFade = true;
+    }
+
+    public void locationReset()
+    {
+        obj.transform.position = new Vector3(0,0,0);
+    }
+
+    private void Awake() {
+        if(toggleUIFade) {
+            FadeOut();
+            while(outFade)
+            {
+                if(aUIGroup.alpha>=0)
+                {
+                    aUIGroup.alpha -= (Time.deltaTime);
+                    if(aUIGroup.alpha==0)
+                    {
+                        outFade = false;
+                    }
+                }
+            }
+        }
     }
 
     public void Interact() {
@@ -35,8 +75,23 @@ public class Lever : MonoBehaviour
             case interaction.EXAMINE:
                 break;
             case interaction.LEVEL:
+                FadeIn();
+                while(inFade)
+                {
+                    if(aUIGroup.alpha<1)
+                    {
+                        aUIGroup.alpha += (Time.deltaTime);
+                        if(aUIGroup.alpha>=1)
+                        {
+                            inFade = false;
+                        }
+                    }
+                }
+                locationReset();
+                SceneManager.LoadScene(level);
                 break;
             case interaction.GAME:
+                Destroy(obj);
                 SceneManager.LoadScene(win);
                 break;
             default:
