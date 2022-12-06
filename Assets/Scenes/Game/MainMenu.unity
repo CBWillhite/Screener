@@ -6704,6 +6704,11 @@ MonoBehaviour:
   SFXVolume: 1
   musicVolume: 1
   masterVolume: 1
+--- !u!1 &1999979380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8720635305972299510, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+  m_PrefabInstance: {fileID: 8653933681572075758}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6163255934923116343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6821,6 +6826,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5502116731967492253, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502116731967492253, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502116731967492253, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502116731967492253, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 8653933681572075761}
+    - target: {fileID: 5502116731967492253, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1999979380}
+    - target: {fileID: 5502116731967492253, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502116731967492253, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502116731967492253, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502116731967492253, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502116731967492253, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502116731967492253, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502116731967492253, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449153659771492426, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_text
+      value: Read Story
+      objectReference: {fileID: 0}
     - target: {fileID: 8653933680662338298, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -6828,6 +6885,10 @@ PrefabInstance:
     - target: {fileID: 8653933680662338298, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653933680726825845, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
+      propertyPath: m_text
+      value: Skip Story
       objectReference: {fileID: 0}
     - target: {fileID: 8653933681049119829, guid: 95bcd6874ab4fdf4096812fb99d83075, type: 3}
       propertyPath: m_AnchorMax.x
